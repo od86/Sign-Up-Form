@@ -8,42 +8,55 @@
 </head>
 <body>
   <div class="background-side">Titanfall 2</div>
+  
   <section class="form-side">
-    <div>
-      <p>This is the sign up page for a Titanfall based service. 
+    <div class="text-paragraph">
+      <p class="overview">This is the sign up page for a Titanfall based service. 
         The game Titanfall 2 was launched in 2016. It is a fast-paced 
         FPS with 2 gamemodes <i>Campaign</i> or <i>Multiplayer</i>.</p>
-      <p>The skies belong to <b>me</b></p>
+
+      <p class="quote">The skies belong to <b>me</b></p>
     </div>
+
     <form action="">
       <div>
-        <label for="first-name">First Name</label>
-        <input type="text" id="first-name" required>
+        <h1>Enter Details</h1>
       </div>
 
-      <div>
-        <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" required>
+      <div class="names container">
+        <div class="input-area">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" required>
+        </div>
+
+        <div class="input-area">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" required>
+        </div>
       </div>
 
-      <div>
-        <label for="email">Email</label>
-        <input type="text" id="email" required>
+      <div class="contact-info container">
+        <div class="input-area">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div class="input-area">
+          <label for="phone-number">Phone Number</label>
+          <input type="tel" id="phone-number" required>
+        </div>
       </div>
 
-      <div>
-        <label for="phone-number">Phone Number</label>
-        <input type="text" id="phone-number" required>
-      </div>
+      <div class="password container">
+        <div class="input-area">
+          <label for="password">Password</label>
+          <input type="password" id="password" required>
+        </div>
 
-      <div>
-        <label for="password">Password</label>
-        <input type="text" id="password" required>
-      </div>
-
-      <div>
-        <label for="confirm-password">Confirm Password</label>
-        <input type="text" id="confirm-password" required>
+        <div class="input-area">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" required>
+        </div>
       </div>
     </form>
   </section>

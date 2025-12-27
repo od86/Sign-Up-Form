@@ -9,7 +9,9 @@
 body {
   display: flex;
   height: 100vh;
-  background-color: rgb(201, 201, 201);
+  width: 100vw;
+  background-color: rgb(41, 41, 41);
+  color: rgb(231, 231, 231);
 }
 
 .background-side {
@@ -22,4 +24,72 @@ body {
   color: white;
   font-size: 48px;
   font-weight: 900;
+
+  flex-shrink: 0;
+}
+
+.form-side {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  padding-top: 128px;
+}
+
+.text-paragraph {
+  padding: 0px 64px;
+  margin-right: 128px;
+}
+
+.quote, .overview {
+  font-size: 32px;
+}
+
+.overview {
+  margin-bottom: 32px;
+}
+
+.quote {
+  margin-bottom: 64px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+
+  padding: 32px 64px;
+  background-color: rgb(56, 62, 78);
+  height: 320px;
+}
+
+.container {
+  display: flex;
+  gap: 64px;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 750;
+}
+
+input {
+  background-color: rgb(56, 62, 78);
+  border: 1px solid rgb(150, 150, 150);
+  color: rgb(231, 231, 231);
+  border-radius: 8px;
+
+  width: 256px;
+  height: 32px;
+
+  padding: 16px 8px;
+}
+
+input[type="password"]:invalid {
+  border: 1px solid rgb(255, 52, 52);
 }
