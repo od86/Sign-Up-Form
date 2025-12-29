@@ -7,62 +7,59 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="background-side">Titanfall 2</div>
+  <div class="background-container">Titanfall 2</div>
   
-  <section class="form-side">
-    <div class="text-paragraph">
-      <p class="overview">This is the sign up page for a Titanfall based service. 
+  <section>
+    <div class="info-container">
+      <p class="description">This is the sign up page for a Titanfall based service. 
         The game Titanfall 2 was launched in 2016. It is a fast-paced 
         FPS with 2 gamemodes <i>Campaign</i> or <i>Multiplayer</i>.</p>
-
-      <p class="quote">The skies belong to me</p>
+      <p class="viper-quote">The skies belong to me</p>
     </div>
 
     <form action="">
-      <div>
-        <h1>Enter Details</h1>
-      </div>
+      <h1>Enter Details</h1>
 
-      <div class="names container">
-        <div class="input-area">
+      <div class="input-container">
+        <div class="input-section">
           <label for="first-name">First Name</label>
           <input type="text" id="first-name" required>
         </div>
 
-        <div class="input-area">
+        <div class="input-section">
           <label for="last-name">Last Name</label>
           <input type="text" id="last-name" required>
         </div>
       </div>
 
-      <div class="contact-info container">
-        <div class="input-area">
+      <div class="input-container">
+        <div class="input-section">
           <label for="email">Email</label>
           <input type="email" id="email" required>
         </div>
 
-        <div class="input-area">
+        <div class="input-section">
           <label for="phone-number">Phone Number</label>
           <input type="tel" id="phone-number" required>
         </div>
       </div>
 
-      <div class="password container">
-        <div class="input-area">
+      <div class="input-container">
+        <div class="input-section">
           <label for="password">Password</label>
           <input type="password" id="password" required>
         </div>
 
-        <div class="input-area">
+        <div class="input-section">
           <label for="confirm-password">Confirm Password</label>
           <input type="password" id="confirm-password" required>
         </div>
       </div>
     </form>
 
-    <div class="enter-options">
-      <button type="submit">Create Account</button>
-      <p>Already have an account? <button>Log In</button></p>
+    <div class="sign-in-options">
+      <button type="submit" class="create-account-button">Create Account</button>
+      <p class="log-in-text">Already have an account? <button class="log-in-button">Log In</button></p>
     </div>
   </section>
 </body>

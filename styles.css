@@ -6,14 +6,52 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgb(245, 245, 245);;
+:root {
+  --logging-in-color: rgb(83, 119, 81);
+  --white-background-color: rgb(245, 245, 245);
 }
 
-.background-side {
+body,
+form,
+.input-container,
+.input-section {
+  display: flex;
+}
+
+form,
+.input-section {
+  flex-direction: column;
+}
+
+.log-in-text,
+.log-in-button,
+.sign-in-options {
+  font-size: 16px;
+}
+
+.log-in-button,
+.log-in-text {
+  font-weight: 600;
+}
+
+.description,
+.create-account-button {
+  margin-bottom: 32px;
+}
+
+.viper-quote, 
+.description {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+body {
+  background-color: rgb(245, 245, 245);
+  width: 100vw;
+  height: 100vh;
+}
+
+.background-container {
   background-image: url("titanfall-background.jpg");
   background-size: 100%;
   width: 600px;
@@ -27,44 +65,20 @@ body {
   flex-shrink: 0;
 }
 
-.form-side {
-  display: flex;
-  flex-direction: column;
-
-  width: 100%;
-}
-
-.text-paragraph {
+.info-container {
+  margin: 96px 256px 64px 0px;
   padding: 0px 64px;
-  margin-right: 256px;
-  margin-top: 96px;
-}
-
-.quote, .overview {
-  font-size: 24px;
-
-  font-weight: bold;
-}
-
-.overview {
-  margin-bottom: 32px;
-}
-
-.quote {
-  margin-bottom: 64px;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+  background-color: rgb(250, 250, 250);
+  height: 332px;
   gap: 16px;
 
+  box-shadow: 1px 2px 4px rgb(212, 212, 212);
   padding: 24px 64px 32px 64px;
-  height: 332px;
-  background-color: rgb(250, 250, 250);
-  color: rgb(66, 66, 66);
 
-  box-shadow: 1px 3px 8px gray;
+  color: rgb(66, 66, 66);
 }
 
 h1 {
@@ -72,35 +86,55 @@ h1 {
   color: black;
 }
 
-.container {
-  display: flex;
-  gap: 64px;
+.input-container { 
+  gap: 64px; 
 }
 
-.input-area {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  font-weight:lighter;
+label { 
+  font-weight: lighter; 
 }
 
 input {
-  border: 2px solid rgb(223, 223, 223);
-  border-radius: 8px;
-
   width: 288px;
   height: 32px;
 
+  border: 2px solid rgb(223, 223, 223);
+  border-radius: 8px;
   padding: 16px 8px;
 }
 
-input[type="password"]:invalid {
-  border: 2px solid rgb(255, 99, 99);
-}
+input[type="password"]:invalid { border: 2px solid rgb(255, 99, 99); }
 
 input:focus {
+  border: 2px solid rgb(161, 170, 255);
   outline: none;
-  border: 2px solid rgb(161, 170, 255)
+}
+
+.sign-in-options { 
+  padding: 48px 64px; 
+}
+
+.create-account-button {
+  background-color: var(--logging-in-color);
+  width: 232px;
+  height: 48px;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 18px;
+  font-weight: bolder;
+  color: white;
+}
+
+.log-in-button {
+  background-color: var(--white-background-color);
+  border: none;
+
+  color: var(--logging-in-color);
+}
+
+.log-in-button:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
