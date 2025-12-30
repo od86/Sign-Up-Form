@@ -4,63 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Titanfall Sign Up Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Rubik+Glitch&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="background-container">Titanfall 2</div>
-  
+  <div class="background-container">
+    <div class="background-text">
+      <img src="pilots-helmet.png" alt="pilot helmet"> 
+      <p class="game-title">Titanfall 2</p>
+    </div>
+  </div>
   <section>
     <div class="info-container">
-      <p class="description">This is the sign up page for a Titanfall based service. 
+      <p class="description">This is the sign up page for a Titanfall 2 based service. 
         The game Titanfall 2 was launched in 2016. It is a fast-paced 
         FPS with 2 gamemodes <i>Campaign</i> or <i>Multiplayer</i>.</p>
       <p class="viper-quote">The skies belong to me</p>
     </div>
-
     <form action="">
-      <h1>Enter Details</h1>
-
-      <div class="input-container">
-        <div class="input-section">
-          <label for="first-name">First Name</label>
-          <input type="text" id="first-name" required>
+      <div class="input-wrapper">
+        <h1>Enter Details</h1>
+        <div class="input-container">
+          <div class="input-section">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="user_first_name" maxlength="30" required>
+          </div>
+          <div class="input-section">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="user_last_name" maxlength="30" required>
+          </div>
         </div>
+        <div class="input-container">
+          <div class="input-section">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="user_email" required>
+          </div>
 
-        <div class="input-section">
-          <label for="last-name">Last Name</label>
-          <input type="text" id="last-name" required>
+          <div class="input-section">
+            <label for="phone-number">Phone Number</label>
+            <!-- This is has a minlength and maxlength of 11 as I based if off the length of my phone number-->
+            <input type="tel" id="phone-number" name="user_phone_number" minlength="11" maxlength="11" required>
+          </div>
+        </div>
+        <div class="input-container">
+          <div class="input-section">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="user_password" required>
+          </div>
+          <div class="input-section">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="user_confirmation_password" required>
+          </div>
         </div>
       </div>
-
-      <div class="input-container">
-        <div class="input-section">
-          <label for="email">Email</label>
-          <input type="email" id="email" required>
-        </div>
-
-        <div class="input-section">
-          <label for="phone-number">Phone Number</label>
-          <input type="tel" id="phone-number" required>
-        </div>
-      </div>
-
-      <div class="input-container">
-        <div class="input-section">
-          <label for="password">Password</label>
-          <input type="password" id="password" required>
-        </div>
-
-        <div class="input-section">
-          <label for="confirm-password">Confirm Password</label>
-          <input type="password" id="confirm-password" required>
-        </div>
+      <div class="sign-in-options">
+        <button type="submit" class="create-account-button" name="create_account_button">Create Account</button>
+        <p class="log-in-text">Already have an account? <button type="button" class="log-in-button">Log In</button></p>
       </div>
     </form>
-
-    <div class="sign-in-options">
-      <button type="submit" class="create-account-button">Create Account</button>
-      <p class="log-in-text">Already have an account? <button class="log-in-button">Log In</button></p>
-    </div>
   </section>
 </body>
 </html>
